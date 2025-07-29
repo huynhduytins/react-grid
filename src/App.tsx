@@ -16,7 +16,6 @@ const getPeople = (): Person[] => [
 
 const getColumns = (): Column[] => [
   { columnId: "name", width: 150 },
-  { columnId: "empty", width: 150 },
   { columnId: "surname", width: 150 },
   { columnId: "age", width: 150 },
 ];
@@ -25,7 +24,6 @@ const headerRow: Row = {
   rowId: "header",
   cells: [
     { type: "header", text: "Name", colspan: 2, style: {background: 'red'}},
-    { type: "header", text: "" },
     { type: "header", text: "Surname" },
     { type: "header", text: "Age" },
   ]
@@ -37,7 +35,6 @@ const getRows = (people: Person[]): Row[] => [
     rowId: idx,
     cells: [
       { type: "text", text: person.name, colspan: 2},
-      { type: "text", text: '' },
       { type: "text", text: person.surname },
       { type: "number", value: person.age }
     ]
